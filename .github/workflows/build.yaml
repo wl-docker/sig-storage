@@ -28,3 +28,7 @@ jobs:
           docker tag k8s.gcr.io/sig-storage/csi-snapshotter:v3.0.2 xzxwl/csi-snapshotter:v3.0.2
           docker push xzxwl/csi-snapshotter:v3.0.2
           
+          docker pull k8s.gcr.io/sig-storage/csi-resizer:v1.0.1
+          docker tag k8s.gcr.io/sig-storage/csi-resizer:v1.0.1 xzxwl/csi-resizer:v1.0.1
+          docker push xzxwl/csi-resizer:v1.0.1
+          
