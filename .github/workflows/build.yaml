@@ -13,7 +13,8 @@ jobs:
       - name: pull & push
         run: |
           echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
-          docker pull gcr.io/google-samples/xtrabackup:1.0
-          docker tag gcr.io/google-samples/xtrabackup:1.0 xzxwl/xtrabackup:1.0
-          docker push xzxwl/xtrabackup:1.0
+          
+          docker pull gcr.io/distroless/static:nonroot
+          docker tag gcr.io/distroless/static:nonroot xzxwl/static:nonroot
+          docker push xzxwl/static:nonroot
           
