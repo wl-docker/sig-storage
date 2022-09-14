@@ -14,7 +14,19 @@ jobs:
         run: |
           echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
           
-          docker pull registry.gitlab.com/gitlab-org/gitlab-runner/gitlab-runner-helper:x86_64-32fc1585
-          docker tag registry.gitlab.com/gitlab-org/gitlab-runner/gitlab-runner-helper:x86_64-32fc1585 xzxwl/gitlab-runner-helper:x86_64-32fc1585
-          docker push xzxwl/gitlab-runner-helper:x86_64-32fc1585
+          docker pull k8s.gcr.io/kube-apiserver:v1.23.9
+          docker tag k8s.gcr.io/kube-apiserver:v1.23.9 xzxwl/kube-apiserver:v1.23.9
+          docker push xzxwl/kube-apiserver:v1.23.9
+          
+          docker pull k8s.gcr.io/kube-proxy:v1.23.9
+          docker tag k8s.gcr.io/kube-proxy:v1.23.9 xzxwl/kube-proxy:v1.23.9
+          docker push xzxwl/kube-proxy:v1.23.9
+          
+          docker pull k8s.gcr.io/kube-scheduler:v1.23.9
+          docker tag k8s.gcr.io/kube-scheduler:v1.23.9 xzxwl/kube-scheduler:v1.23.9
+          docker push xzxwl/kube-scheduler:v1.23.9
+          
+          docker pull k8s.gcr.io/kube-controller-manager:v1.23.9
+          docker tag k8s.gcr.io/kube-controller-manager:v1.23.9 xzxwl/kube-controller-manager:v1.23.9
+          docker push xzxwl/kube-controller-manager:v1.23.9
           
