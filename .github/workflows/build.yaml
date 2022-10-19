@@ -18,8 +18,27 @@ jobs:
           docker tag quay.io/cilium/cilium:v1.12.3 xzxwl/cilium:v1.12.3
           docker push xzxwl/cilium:v1.12.3
           
-          docker pull quay.io/cilium/certgen:v0.1.8@sha256:4a456552a5f192992a6edcec2febb1c54870d665173a33dc7d876129b199ddbd
-          docker tag quay.io/cilium/certgen:v0.1.8@sha256:4a456552a5f192992a6edcec2febb1c54870d665173a33dc7d876129b199ddbd xzxwl/certgen:v0.1.8@sha256:4a456552a5f192992a6edcec2febb1c54870d665173a33dc7d876129b199ddbd
-          docker push xzxwl/certgen:v0.1.8@sha256:4a456552a5f192992a6edcec2febb1c54870d665173a33dc7d876129b199ddbd
+          docker pull quay.io/cilium/certgen:v0.1.8
+          docker tag quay.io/cilium/certgen:v0.1.8 xzxwl/certgen:v0.1.8
+          docker push xzxwl/certgen:v0.1.8
           
+          docker pull quay.io/cilium/hubble-relay:v1.12.3
+          docker tag quay.io/cilium/hubble-relay:v1.12.3 xzxwl/hubble-relay:v1.12.3
+          docker push xzxwl/hubble-relay:v1.12.3
+          
+          docker pull quay.io/cilium/hubble-ui-backend:v0.9.2
+          docker tag quay.io/cilium/hubble-ui-backend:v0.9.2 xzxwl/hubble-ui-backend:v0.9.2
+          docker push xzxwl/hubble-ui-backend:v0.9.2
+          
+          docker pull quay.io/cilium/hubble-ui:v0.9.2
+          docker tag quay.io/cilium/hubble-ui:v0.9.2 xzxwl/hubble-ui:v0.9.2
+          docker push xzxwl/hubble-ui:v0.9.2
+          
+          docker pull quay.io/cilium/cilium-etcd-operator:v2.0.7
+          docker tag quay.io/cilium/cilium-etcd-operator:v2.0.7 xzxwl/cilium-etcd-operator:v2.0.7
+          docker push xzxwl/cilium-etcd-operator:v2.0.7
+          
+          docker pull quay.io/cilium/operator:v1.12.3
+          docker tag quay.io/cilium/operator:v1.12.3 xzxwl/operator:v1.12.3
+          docker push xzxwl/operator:v1.12.3
           
