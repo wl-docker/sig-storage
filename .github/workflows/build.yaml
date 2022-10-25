@@ -14,15 +14,31 @@ jobs:
         run: |
           echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
           
-          docker pull quay.io/kubevirt/virt-api:v0.58.0
-          docker tag quay.io/kubevirt/virt-api:v0.58.0 xzxwl/virt-api:v0.58.0
-          docker push xzxwl/virt-api:v0.58.0
-          
-          docker pull quay.io/kubevirt/virt-controller:v0.58.0
-          docker tag quay.io/kubevirt/virt-controller:v0.58.0 xzxwl/virt-controller:v0.58.0
-          docker push xzxwl/virt-controller:v0.58.0
-          
-          docker pull quay.io/kubevirt/virt-handler:v0.58.0
-          docker tag quay.io/kubevirt/virt-handler:v0.58.0 xzxwl/virt-handler:v0.58.0
-          docker push xzxwl/virt-handler:v0.58.0
+          docker pull quay.io/kubevirt/cdi-controller:v1.55.0
+          docker tag quay.io/kubevirt/cdi-controller:v1.55.0 xzxwl/cdi-controller:v1.55.0
+          docker push xzxwl/cdi-controller:v1.55.0
+
+          docker pull quay.io/kubevirt/cdi-importer:v1.55.0
+          docker tag quay.io/kubevirt/cdi-importer:v1.55.0 xzxwl/cdi-importer:v1.55.0
+          docker push xzxwl/cdi-importer:v1.55.0
+
+          docker pull quay.io/kubevirt/cdi-cloner:v1.55.0
+          docker tag quay.io/kubevirt/cdi-cloner:v1.55.0 xzxwl/cdi-cloner:v1.55.0
+          docker push xzxwl/cdi-cloner:v1.55.0
+
+          docker pull quay.io/kubevirt/cdi-apiserver:v1.55.0
+          docker tag quay.io/kubevirt/cdi-apiserver:v1.55.0 xzxwl/cdi-apiserver:v1.55.0
+          docker push xzxwl/cdi-apiserver:v1.55.0
+
+          docker pull quay.io/kubevirt/cdi-uploadserver:v1.55.0
+          docker tag quay.io/kubevirt/cdi-uploadserver:v1.55.0 xzxwl/cdi-uploadserver:v1.55.0
+          docker push xzxwl/cdi-uploadserver:v1.55.0
+
+          docker pull quay.io/kubevirt/cdi-uploadproxy:v1.55.0
+          docker tag quay.io/kubevirt/cdi-uploadproxy:v1.55.0 xzxwl/cdi-uploadproxy:v1.55.0
+          docker push xzxwl/cdi-uploadproxy:v1.55.0
+
+          docker pull quay.io/kubevirt/cdi-operator:v1.55.0
+          docker tag quay.io/kubevirt/cdi-operator:v1.55.0 xzxwl/cdi-operator:v1.55.0
+          docker push xzxwl/cdi-operator:v1.55.0
           
